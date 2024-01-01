@@ -1,0 +1,152 @@
+main{
+    margin: 20px 20px 100px 20px;
+    display: grid;
+    gap: 20px;
+}
+main > div{
+    cursor: pointer;
+    position: relative;
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.25);
+    max-width:  390px;
+    border-radius: 5px;
+    overflow: hidden;
+    left:50%;
+    transform: translateX(-50%);
+}
+main > div > div:nth-child(1){
+    height: 135px;
+    width: 100%;
+    position: relative;
+}
+main > div > div:nth-child(1)::after{
+    content:"";
+    width: 40px;
+    height: 40px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    bottom: -25px;
+}
+main > div > div:nth-child(1) > img{
+    position: relative;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+main > div > div:nth-child(1) > span{
+    padding: 2px 4px;
+    background-color: #FFF;
+    border-radius: 3px;
+    position: absolute;
+    font-size: 16px;
+    bottom: -8px;
+    left:20px;
+
+    color: rgba(0, 0, 0, 0.80);
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.64px;
+}
+main > div > div:nth-child(2){
+    height: 60px;
+}
+main > div > div:nth-child(2) h4{
+    margin: 15px 0 0 24px;
+    color: #000;
+
+    font-family: 'Poppins';
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing: 0.88px;
+}
+main > div > div:nth-child(2) span{
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    color: #616161;
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.56px;
+}
+.main-button-mobile{
+    margin-top: 30px;
+    height: 50px;
+    background-color: #F24B4B;
+
+    color: #FFF;
+    font-family: 'Roboto Slab';
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.64px;
+    z-index: 2;
+    position: relative;
+    border-radius: 5px;
+}
+.main-button-mobile::after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 50%;
+    bottom:-40%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background-color: #F24B4B;
+}
+.main-button-mobile::before{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #FFFFFF;
+    left:-2%;
+    top:50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+@media screen and (min-width: 576px) {
+    .main-button-mobile{
+        margin: 20px 0 0 0;
+        width: 290px;
+        height: 84px;
+        
+    }
+    .main-button-mobile::after{
+        bottom:-30%;
+    }
+}
+@media screen and (min-width:700px) {
+    main{
+        margin: 50px 50px 100px 50px;
+        display: grid;
+        grid-template-columns: 6fr 6fr;
+    }
+}
+@media screen and (min-width : 992px){
+    .main-button-mobile{
+        display: none;
+    }
+}
+@media screen and (min-width : 1200px){
+    main{
+        width: 1180px;
+        margin: 72px 0;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 60px auto 200px auto;
+    }
+    main > div > div:nth-child(2) h4{
+        margin: 30px 0 0 24px;
+        font-size: 22px;
+    }
+    main > div{
+        min-width: 380px;
+        min-height: 220px;
+        left:0;
+        transform: none;
+    }
+}
