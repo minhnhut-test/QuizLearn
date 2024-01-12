@@ -71,9 +71,9 @@
     position: absolute;
     width: 30px;
     height: 30px;
-    right:-4%;
-    top:50%;
-    transform: translateY(-50%);
+    left:50%;
+    top:70%;
+    transform: translateX(-50%);
     border-radius: 50%;
     background-color: #F24B4B;
 }

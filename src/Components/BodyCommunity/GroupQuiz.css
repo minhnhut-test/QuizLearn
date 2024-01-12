@@ -1,0 +1,75 @@
+.groupQuiz{
+    display: grid;
+    padding: 0 20px;
+    margin: 0 0 50px 0;
+}
+.groupQuiz h4{
+    color: #000;
+    margin: 0;
+    font-family: 'Roboto Slab';
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: 0.88px;
+}
+.groupQuiz > main {
+    margin: 20px 0;
+}
+.groupQuiz > a{
+    background-color: transparent;
+    color: #5A86BF;
+    font-family: 'Roboto Slab';
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.88px;
+    margin-bottom: 50px;
+}
+
+@media screen and (min-width: 576px) {
+    .groupQuiz{
+        padding: 0 50px;
+        display: grid;
+        grid-template-areas: "header seemore"
+                             "card card";
+    }
+    .groupQuiz h4{
+        grid-area: header;
+    }
+    .groupQuiz a{
+        grid-area: seemore;
+        margin-bottom: 0;
+        text-align: end;
+    }
+    .groupQuiz > main{
+        grid-area: card;
+    }
+}
+@media screen and (min-width : 992px){
+
+}
+@media screen and (min-width : 1200px){
+    .groupQuiz{
+        padding: 0;
+        margin: 30px 100px;
+        grid-template-columns: 6fr 6fr;
+        overflow: hidden;
+    }
+  
+    .groupQuiz > main{
+        position: relative;
+        max-width: 1180px;
+        width: fit-content;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        padding: 10px 0;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        
+    }
+}
+@media screen and (min-width : 1400px){
+    .groupQuiz{
+        width: 1180px;
+        margin: 30px auto;
+    }
+}
