@@ -23,7 +23,7 @@ function BodyCommunity() {
                     </form>
 
                     <button class="create-quiz" onClick={routeChange}>
-                        <img src={icon_create_quiz} />
+                        <img src={icon_create_quiz} alt='icon create quiz'/>
                         <h4><Link to="/create-quiz">Create quiz</Link></h4>
                     </button>
             </div>

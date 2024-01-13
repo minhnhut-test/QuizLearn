@@ -24,7 +24,7 @@ function QuestionCard(params) {
                     </button>
 
                     <div onClick={params.handleRemoveQuestion}>
-                        <img src={trash} />
+                        <img src={trash} alt='icon trash'/>
                     </div>
             </div>
 

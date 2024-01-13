@@ -85,7 +85,7 @@ function AddQuestion(props){
         <form className="add-question">
                 <header>
                     <div onClick={goBack} style={{cursor: 'pointer'}}>
-                        <img src={icon_back}/>
+                        <img src={icon_back} alt='icon_back'/>
                     </div>
 
                     <button type="submit" onClick={saveQuestion}>
@@ -133,13 +133,13 @@ function AddQuestion(props){
                                 <div className='card-container'>
                                     <Answer index_name={index.key} />
                                     <div onClick={() => removeAnswerSingle(index)}>
-                                        <img  src={trash}/>
+                                        <img  src={trash} alt='icon trash'/>
                                     </div>
                                 </div>
                             ))}
                           
                             <div className='add-answer' onClick={addAnswerSingle}>
-                                <img src={icon_plus}/>
+                                <img src={icon_plus} alt='icon plus'/>
                             </div>
                         </div>
                     </div>
@@ -162,13 +162,13 @@ function AddQuestion(props){
                                     <div className='card-container'>
                                         <MultipleAnswer />
                                         <div onClick={() => removeAnswer(index)}>
-                                            <img  src={trash}/>
+                                            <img  src={trash} alt='icon trash'/>
                                         </div>
                                     </div>
                                     
                                 ))}    
                                 <div className='add-answer' onClick={addAnswer} >
-                                    <img src={icon_plus}/>
+                                    <img src={icon_plus} alt='icon plus'/>
                                 </div>
                         </div>
                     </div>

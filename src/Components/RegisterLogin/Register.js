@@ -27,11 +27,11 @@ function Register(){
                 </div>
                 <div>
                     <label for="Password">Password</label>
-                    <input type="text" />
+                    <input type="password" />
                 </div>
                 <div>
                     <label for="Re-password">Re-password</label>
-                    <input type="text" />
+                    <input type="password" />
                 </div>
                 <button>Register</button>
                 <p>You already have account ? <Link to="/login">Login</Link></p>

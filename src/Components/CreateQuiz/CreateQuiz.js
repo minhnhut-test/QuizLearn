@@ -79,7 +79,7 @@ function CreateQuiz(){
 
                         <input type="text"  placeholder='Untitled Quiz' />
                         
-                        <img src="setting.svg"/>
+                        <img src="setting.svg" alt='setting'/>
 
                         <button className="form-button-desktop">Save</button>
 
