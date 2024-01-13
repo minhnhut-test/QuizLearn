@@ -102,6 +102,7 @@
         left:50%;
         transform: translateX(-50%);
     }
+  
     .community-head{
         display:grid;
         grid-template-columns: 1fr 10fr 1fr ;

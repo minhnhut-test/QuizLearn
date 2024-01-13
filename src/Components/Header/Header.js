@@ -4,6 +4,7 @@ import './Header.css';
 import logo from './img/logo.svg';
 import mobileActive from './img/nav-mobile-active.svg';
 import navMobile from './img/nav-mobile.svg';
+import { Link } from 'react-router-dom';
 
 function Header() {
     
@@ -16,14 +17,21 @@ function Header() {
         let path = '/register';
         navigate(path);
     }
-
+    
     return(
         <header>
             
-            <img src={logo} alt="" class="logo"/>
+            <img src={logo} alt="" class="logo" onClick={
+                () => {
+                    let path = "/";
+                    navigate(path);
+                }    
+            }
+            style={{cursor:'pointer'}}
+            />
 
             <ul className="nav-desktop" id="menu-mobile">
-                <li><a href="">Home</a></li>
+                <li><Link to="/community">Home</Link></li>
                 <li><a href="">Services</a></li>
                 <li><a href="">About</a></li>
                 <li><a href="">Help</a></li>

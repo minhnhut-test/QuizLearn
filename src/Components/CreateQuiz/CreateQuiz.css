@@ -2,11 +2,12 @@
     display: none;
 }
 .create-quiz{
-    background-color: #EFEFEF;min-height: 100vh;
+    background-color: #EFEFEF;
 }
 .create-quiz .form-create-quiz{
     margin: 0 20px;
     display: grid;
+   
 }
 .create-quiz .form-create-quiz > div:nth-child(1){
     display: flex;
@@ -46,6 +47,7 @@
 }
 .create-quiz .form-create-quiz .frame-question{
     margin-top: 30px;
+    min-height: 70vh;
 }
 @media screen and (min-width : 576px){
     .create-quiz .form-create-quiz{

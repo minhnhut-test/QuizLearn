@@ -8,10 +8,9 @@ import BodyCommunity from "./Components/BodyCommunity/BodyCommunity";
 import MyLibrary from "./Components/MyLibrary/MyLibrary";
 import Reports from "./Components/Reports/Report";
 import CreateQuiz from "./Components/CreateQuiz/CreateQuiz";
-import AddQuestion from "./Components/CreateQuiz/AddQuestion/AddQuestion";
-
-
-
+import QuizzesContainer from "./Components/QuizzesContain/QuizzesContainer";
+import FlashCard from "./Components/FlashCard/FlashCard";
+import Check from "./Components/Check/Check";
 
 function App() {
   return (
@@ -28,6 +27,9 @@ function App() {
                   <Route path="report"  element={<Reports />}/>
           </Route>
           <Route path="create-quiz" element={<CreateQuiz />} />
+          <Route path="quizz-container" element={<QuizzesContainer />} /> 
+          <Route path="flash-card" element={<FlashCard />} />
+          <Route path="check" element={<Check />} />
       </Routes>
     </BrowserRouter>
     
