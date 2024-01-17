@@ -60,7 +60,7 @@ function  GroupQuiz(props) {
     const numberCrad = props.numberCard;
     return(
         <div className="groupQuiz">
-            <h4>{props.titleGroup}{console.log(props.titleGroup)}</h4>
+            <h4>{props.titleGroup}</h4>
             <main>
                 {quiz.slice(0,numberCrad).map((quiz) => (
                     <Card key={quiz.id}

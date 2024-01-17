@@ -99,6 +99,7 @@ function AddQuestion(props){
 
                 <div className='question-type'>
 
+                
                     {isMultiple ?
                          <div className='multiple-answer'  
                          style={myStyle}
@@ -119,11 +120,11 @@ function AddQuestion(props){
                 
 
                 {   !isMultiple &&
-                    <div className='form-answer multiple-answer'>
+                    <div className='form-answer single-answer'>
                         <div className='question-added' >
                             <div >
                                 <p className='question-p' onInput={onChangeQuestion} contenteditable="true"> 
-                                    Question: ...
+                                    Question:...
                                 </p>
                             </div>
                         </div>
@@ -149,7 +150,7 @@ function AddQuestion(props){
 
                 {
                     isMultiple &&
-                    <div className='form-answer signle-answer'>
+                    <div className='form-answer multiple-answer'>
                         <div className='question-added'>
                         <div>
                                 <p className='question-p'  onInput={onChangeQuestion}  contenteditable="true"> 

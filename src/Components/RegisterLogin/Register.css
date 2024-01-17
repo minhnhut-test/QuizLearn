@@ -35,6 +35,15 @@
     padding-left: 20px;
     font-size: 16px;
 }
+.register form div label:nth-child(3){
+    font-size: 14px;
+    color: #F24B4B;
+    letter-spacing: 0;
+    display: flex;
+    align-items:self-start;
+    column-gap: 10px;
+    justify-content: flex-end;
+}
 .register form div label{
     color: rgba(0, 0, 0, 0.70);
     font-family: 'Poppins';
@@ -59,7 +68,7 @@
 
     text-align: center;
     font-family: 'Poppins';
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
     letter-spacing: 0.72px;
     margin-top: 30px;
@@ -72,7 +81,7 @@
     .register form h1{
         grid-column: span 2;
     }
-    .register form div:nth-child(n+4){
+    .register form div{
         grid-column: span 2;
     }
     .register form button{
