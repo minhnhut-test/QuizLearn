@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import './Header.css';
 import logo from './img/logo.svg';
@@ -17,7 +17,11 @@ function Header() {
         let path = '/register';
         navigate(path);
     }
-    
+    const [isActiveMobile,setActiveMobile] = useState(false);
+    const handleClick = () =>{
+        setActiveMobile(prev => !prev);
+        
+    }
     return(
         <header>
             
@@ -45,8 +49,34 @@ function Header() {
                 </button>
 
             </ul>
-            <img src={mobileActive} alt="" id="nav-active" />
-            <img src={navMobile} alt="" class="nav-tablet" id="nav-tablet" />
+            {   isActiveMobile &&
+                <img src={mobileActive} alt="" id="nav-active"  onClick={handleClick} />
+            }
+            {   !isActiveMobile &&
+                 <img src={navMobile} alt="" class="nav-tablet" id="nav-tablet" onClick={handleClick} />
+            }
+           
+
+
+            {   isActiveMobile &&
+                <div className='nav-mobile'>
+                        <ul>
+                            <li><Link to="/community">Home</Link></li>
+                            <li><a href="">Services</a></li>
+                            <li><a href="">About</a></li>
+                            <li><a href="">Help</a></li>
+
+                            <button className="button-desktop" onClick={EventRegister}>
+                                Register
+                            </button>
+                
+                            <button className="button-desktop" onClick={EventLogin}>
+                                Login
+                            </button>
+                            
+                        </ul>
+                </div>
+            }
         </header>
     );
 }

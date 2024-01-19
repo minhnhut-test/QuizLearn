@@ -54,8 +54,14 @@ function HeaderCommunity(params) {
 
                 
                 <div class="nav-img">
-                        <img src={mobileActive} alt="" id="nav-active" />
-                        <img src={navMobile} alt="" class="nav-tablet" id="nav-tablet" />
+                    {   false &&
+                         <img src={mobileActive} alt="" id="nav-active" />
+                    }
+                       
+                    {   true &&     
+                         <img src={navMobile} alt="" class="nav-tablet" id="nav-tablet" />
+                    }  
+                       
                 </div>
         </header>
     );

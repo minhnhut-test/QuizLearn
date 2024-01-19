@@ -7,6 +7,7 @@ header{
     align-items: center;
     padding: 0 20px 0 20px;
     border-bottom: 0.1px solid rgba(0, 0, 0, 0.25);
+
 }
 header > img:nth-child(1){
     height: 80%;
@@ -15,9 +16,57 @@ header > img:nth-child(1){
 header > .nav-tablet{
     height: 30%;
 }
-#nav-active{
-    display: none;
+.nav-mobile{
+    position: absolute;
+    background-color: #FFFFFF;
+    top:99%;
+    z-index: 100;
+    left:0;
+    right: 0;
+    padding: 20px 0;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
+.nav-mobile > ul {
+    padding-inline-start: 0;
+    display: grid;
+    padding: 0 20px;
+    row-gap: 10px;
+}
+.nav-mobile > ul > li{
+    height: 45px;
+    border-radius: 5px;
+    background: #EFEFEF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-mobile > ul > li a{
+    color: #000;
+    font-family: "Roboto Slab";
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.64px;
+}
+.nav-mobile > ul > button{
+    height: 50px;
+    border-radius: 5px;
+    
+    font-family: "Roboto Slab";
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.64px;
+}
+.nav-mobile > ul > button:nth-child(5){
+    border: 0.5px solid rgba(0, 0, 0, 0.50);
+    background-color: transparent;
+    color: #000;
+}
+.nav-mobile > ul > button:nth-child(6){
+    color: #FFF;
+    background: #F24B4B;
+}
+
 .nav-desktop{
     position: absolute;
     box-sizing: border-box;
@@ -70,8 +119,14 @@ header > .nav-tablet{
     header{
         padding: 0 50px 0 50px;
     }
+    .nav-mobile > ul{
+        padding: 0 50px;
+    }
 }
 @media screen and (min-width : 992px){
+    .nav-mobile, #nav-tablet{
+        display: none;
+    }
     header{
         display: grid;
         grid-template-columns: 2fr 10fr;
