@@ -11,7 +11,7 @@ import CreateQuiz from "./Components/CreateQuiz/CreateQuiz";
 import QuizzesContainer from "./Components/QuizzesContain/QuizzesContainer";
 import FlashCard from "./Components/FlashCard/FlashCard";
 import Check from "./Components/Check/Check";
-import LoadingPage from "./Components/Loading/Loading";
+import ResultCheck from "./Components/ResultCheck/ResultCheck";
 
 
 
@@ -33,7 +33,7 @@ function App() {
           <Route path="quizz-container" element={<QuizzesContainer />} /> 
           <Route path="flash-card" element={<FlashCard />} />
           <Route path="check" element={<Check />} />
-          <Route path="loading" element={<LoadingPage />} />
+          <Route path="result" element={<ResultCheck />} />
       </Routes>
     </BrowserRouter>
     

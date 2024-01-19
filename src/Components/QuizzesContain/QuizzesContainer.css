@@ -44,6 +44,18 @@
     overflow: scroll;
     height: 100%;
 }
+.question-answer .answer{
+    display: grid;
+}
+.question-answer .answer p{
+    text-align: center;
+    
+}
+@media screen and (min-width: 992px){
+    .question-answer .answer p{
+        font-size: 26px;
+    }
+}
 
 .quizz-container > .content-quiz > .navigate-question{
     display: flex;

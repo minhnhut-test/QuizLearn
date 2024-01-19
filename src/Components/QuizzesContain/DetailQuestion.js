@@ -5,8 +5,9 @@ import './DetailQuestion.css';
 
 function DeTailQuestion(params) {
     const answers = params.answer;
+    const color = params.color || '';
     return(
-        <div className="detail-question">
+        <div className="detail-question" style={{backgroundColor : color }}>
             <div className="answer-in-detail">
                  <Answer answer={answers} />
             </div>
