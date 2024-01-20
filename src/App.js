@@ -1,7 +1,7 @@
 import Welcome from "./Components/WelcomePages";
 import Login from "./Components/RegisterLogin/Login";
 import Register from "./Components/RegisterLogin/Register";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
 import Community from "./Components/Community";
 import Activity from "./Components/Activity/Activity";
 import BodyCommunity from "./Components/BodyCommunity/BodyCommunity";
@@ -18,7 +18,7 @@ import ResultCheck from "./Components/ResultCheck/ResultCheck";
 function App() {
   return (
   
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
           <Route path="/" element={<Welcome />} />
           <Route path="login" element={<Login />} />
@@ -35,7 +35,7 @@ function App() {
           <Route path="check" element={<Check />} />
           <Route path="result" element={<ResultCheck />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
     
     
   );
