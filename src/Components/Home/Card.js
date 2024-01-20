@@ -1,4 +1,7 @@
 
+
+
+
 function Card(props) {
 
     const myStyle = {
@@ -15,6 +18,7 @@ function Card(props) {
                     <h4>{props.TitleCard}</h4>
                     <span>{props.Author}</span>
                 </div>
+        
         </div>
     );
 }

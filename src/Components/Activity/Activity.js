@@ -8,31 +8,31 @@ function Activity(){
 
     const listCard = [
         {   "id": 1,
-            "img":'logo-green.svg',
-            "NumQuestions" : 169,
+            "img":"logo-green.svg",
+            "NumQuestions" : "169",
             "TitleCard" : "DBI",
             "Author" : "Minh Nhut",
             "color" : '#4CD948'
         },
         {   
             "id": 2,
-            "img":'logo-yellow.svg',
-            "NumQuestions" : 169,
+            "img":"logo-yellow.svg",
+            "NumQuestions" : "169",
             "TitleCard" : "DBI",
             "Author" : "Minh Nhut",
             "color" : "#F2DC6D"
         },
         {   
             "id": 3,
-            "img":'logo-blue.svg',
-            "NumQuestions" : 169,
+            "img":"logo-blue.svg",
+            "NumQuestions" : "169",
             "TitleCard" : "DBI",
             "Author" : "Minh Nhut",
             "color" : "#5A86BF"
         },
         {   
             "id": 4,
-            "img":'logo-green.svg',
+            "img":"logo-green.svg",
             "NumQuestions" : "169",
             "TitleCard" : "DBI",
             "Author" : "Minh Nhut",
@@ -40,7 +40,7 @@ function Activity(){
         },
         {   
             "id": 5,
-            "img":'logo-yellow.svg',
+            "img":"logo-yellow.svg",
             "NumQuestions" : "169",
             "TitleCard" : "DBI",
             "Author" : "Minh Nhut",
@@ -48,7 +48,7 @@ function Activity(){
         },
         {   
             "id": 6,
-            "img":'logo-blue.svg',
+            "img":"logo-blue.svg",
             "NumQuestions" : "169",
             "TitleCard" : "DBI",
             "Author" : "Minh Nhut",
