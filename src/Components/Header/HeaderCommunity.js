@@ -11,7 +11,10 @@ function HeaderCommunity(params) {
     const [isUser,setIsUser] = useState(false);
     
         
-    
+    const [isActive,setActive] = useState(false);
+    const handleActive = () => {
+        setActive(prev => !prev);
+    }
 
     return(
         <header class="community-head">
@@ -26,13 +29,13 @@ function HeaderCommunity(params) {
                 />
                 <ul class="community-mobile-nav">
                     <li>
-                        <Link to="/community">Home</Link>
+                        <Link to="/community" >Home</Link>
                     </li>
                     <li>
-                        <Link to="activity">Activity</Link>
+                        <Link to="activity"  >Activity</Link>
                     </li>
                     <li>
-                        <Link to="my-library">My library</Link>
+                        <Link to="my-library" >My library</Link>
                     </li>
                     <li>
                         <Link to="report">Reports</Link>
@@ -54,15 +57,41 @@ function HeaderCommunity(params) {
 
                 
                 <div class="nav-img">
-                    {   false &&
-                         <img src={mobileActive} alt="" id="nav-active" />
+                    {   isActive &&
+                         <img src={mobileActive} alt="" id="nav-active" onClick={handleActive} />
                     }
                        
-                    {   true &&     
-                         <img src={navMobile} alt="" class="nav-tablet" id="nav-tablet" />
+                    {   !isActive &&     
+                         <img src={navMobile} alt="" class="nav-tablet" id="nav-tablet-community" onClick={handleActive}/>
                     }  
                        
                 </div>
+
+
+                {
+                    isActive &&
+                    <div className='mobile-tablet-active'>
+                           <ul>
+                                    <li>
+                                        <Link to="/community" onClick={handleActive} >Home</Link>
+                                    </li>
+                                    <li>
+                                        <Link to="activity" onClick={handleActive} >Activity</Link>
+                                    </li>
+                                    <li>
+                                        <Link to="my-library" onClick={handleActive} >My library</Link>
+                                    </li>
+                                    <li>
+                                        <Link to="report" onClick={handleActive} >Reports</Link>
+                                    </li>
+
+                                    <form>
+                                        <input type="text" placeholder="Search" />
+                                        <button>Search</button>
+                                    </form>
+                           </ul>
+                    </div>
+                }
         </header>
     );
 }

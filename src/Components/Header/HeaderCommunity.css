@@ -9,12 +9,78 @@
     background-color: #FFF;
 }
 .community-head .nav-img{
-    height: 80%;
     display: flex;
     align-items: center;
 }
 .community-head #nav-active,.community-head .nav-tablet{
     height: 38%;
+}
+.community-head .mobile-tablet-active{
+    position: absolute;
+    top: 99%;
+    left:0;
+    right:0;
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+}
+.community-head .mobile-tablet-active > ul{
+    display: grid;
+    padding-inline-start: 0;
+    row-gap: 10px;
+}
+.community-head .mobile-tablet-active > ul > li{
+    height: 50px;
+    border-radius: 5px;
+    background: #EFEFEF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.community-head .mobile-tablet-active > ul > li > a{
+    color: #000;
+    font-family: "Roboto Slab";
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.64px;
+}
+.community-head .mobile-tablet-active > ul > form{
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    position: relative;
+}
+.community-head .mobile-tablet-active > ul > form > input{
+    height: 50px;
+    border-radius: 5px 0 0 5px;
+    border: 0.5px solid rgba(0, 0, 0, 0.50);
+    border-right: none;
+    background: #FFF;
+    padding-left: 10px;
+    color: #616161;
+    font-family: 'Roboto Slab';
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.64px;
+    outline: none;
+}
+
+.community-head .mobile-tablet-active > ul > form > button{
+    border-radius: 0px 5px 5px 0px;
+    background: #F24B4B;
+    color: #FFF;
+    text-align: center;
+    font-family: 'Roboto Slab';
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.64px;
+    position: relative;
+}
+@media screen and (min-width: 576px) {
+    .community-head .mobile-tablet-active{
+        padding: 20px 50px;
+    }
 }
 @media screen and (min-width:768px) {
     .community-mobile-nav form{
@@ -23,6 +89,9 @@
         height: 35px;
         grid-template-columns: 9fr 3fr;
         
+    }
+    .community-head .mobile-tablet-active > ul > form{
+        display: none;
     }
     .community-mobile-nav form input{
         border-radius:5px 0 0 5px;
@@ -46,6 +115,7 @@
         letter-spacing: 0.64px;
     }
 }
+
 @media screen and (min-width: 992px){
     .nav-tablet{
         display: block;

@@ -1,7 +1,4 @@
 
-
-
-
 function Card(props) {
 
     const myStyle = {
