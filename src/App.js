@@ -18,7 +18,7 @@ import ResultCheck from "./Components/ResultCheck/ResultCheck";
 function App() {
   return (
   
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
           <Route path="/" element={<Welcome />} />
           <Route path="login" element={<Login />} />
@@ -35,7 +35,7 @@ function App() {
           <Route path="check" element={<Check />} />
           <Route path="result" element={<ResultCheck />} />
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
     
     
   );
