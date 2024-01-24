@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 
 function  MultipleAnswer(params) {
  
@@ -8,16 +10,38 @@ function  MultipleAnswer(params) {
     const handleOnBlur = (event) => {
         event.target.style.background = "transparent";
     }
+
+    const [userChoice,setUserChoice] = useState("");
+    const handleOnChangeAnswer = (event) =>{
+        const value = event.target.textContent;
+        setUserChoice(value);
+    }
+   params.choices[params.index_name].userChoice = userChoice;
+
+   
+   const [answerValue, setAnswerValue] = useState(0);
+   const handleRadioChange = (event) =>{
+        if(event.target.checked){
+            setAnswerValue(1);
+        }
+   }
+   console.log(answerValue);
+   params.choices[params.index_name].isAnswer = answerValue;
+
+
+
     return(
         <div>
                                 
             <div  onFocus={handleOnFocus} onBlur={handleOnBlur}>
-                <p contenteditable="true" >
-                    Type answer here
+                <p contenteditable="true" onBlur={handleOnChangeAnswer}
+                     data-placeholder="Enter answer here..."
+                >
+                   
                 </p>
            </div>
     
-            <input type="checkbox" name="answer"  />
+            <input type="checkbox"  onChange={handleRadioChange} />
     
         </div>
     );

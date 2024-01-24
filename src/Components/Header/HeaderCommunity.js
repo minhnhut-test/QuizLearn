@@ -32,13 +32,10 @@ function HeaderCommunity(params) {
                         <Link to="/community" >Home</Link>
                     </li>
                     <li>
-                        <Link to="activity"  >Activity</Link>
+                        <Link to="/community/activity"  >Activity</Link>
                     </li>
                     <li>
-                        <Link to="my-library" >My library</Link>
-                    </li>
-                    <li>
-                        <Link to="report">Reports</Link>
+                        <Link to="/community/my-library" >My library</Link>
                     </li>
 
                     <form>
@@ -76,13 +73,10 @@ function HeaderCommunity(params) {
                                         <Link to="/community" onClick={handleActive} >Home</Link>
                                     </li>
                                     <li>
-                                        <Link to="activity" onClick={handleActive} >Activity</Link>
+                                        <Link to="/community/activity" onClick={handleActive} >Activity</Link>
                                     </li>
                                     <li>
-                                        <Link to="my-library" onClick={handleActive} >My library</Link>
-                                    </li>
-                                    <li>
-                                        <Link to="report" onClick={handleActive} >Reports</Link>
+                                        <Link to="/community/my-library" onClick={handleActive} >My library</Link>
                                     </li>
 
                                     <form>

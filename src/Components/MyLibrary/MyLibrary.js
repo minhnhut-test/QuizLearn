@@ -1,8 +1,10 @@
+import './MyLibrary.css';
+
 
 function  MyLibrary(params) {
     return(
-       <div>
-            <img src="logo-blue.svg" />
+       <div className="my-library">
+            
        </div>
     );
 }

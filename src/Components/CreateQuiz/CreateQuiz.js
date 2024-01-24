@@ -11,34 +11,6 @@ function CreateQuiz(){
 
     // const {listsQuestion} = useContext(CreateQuizContext);
     const [listsQuestion,setListQuestion] = useState([
-        {
-            "question" : "Question : Which of the following statement is belong to DML?",
-            "answerChoices" : [
-                "Create","Create 1","Create 2","Create 3"
-            ],
-            "answer" : ["Create"]
-        },
-        {
-            "question" : "Question : Which of the following statement is belong to DML?",
-            "answerChoices" : [
-                "Create","Create 1","Create 2","Create 3"
-            ],
-            "answer" : ["Create"]
-        },
-        {
-            "question" : "Question : Which of the following statement is belong to DML?",
-            "answerChoices" : [
-                "Create","Create 1","Create 2","Create 3","Create 4"
-            ],
-            "answer" : ["Create"]
-        },
-        {
-            "question" : "Question : Which of the following statement is belong to DML?",
-            "answerChoices" : [
-                "Create","Create 1","Create 2","Create 3"
-            ],
-            "answer" : ["Create","Create 1"]  
-        }
     ]);
 
 
@@ -63,6 +35,7 @@ function CreateQuiz(){
                 isAddQuestion && <AddQuestion 
                                      setIsAddQuestion={setIsAddQuestion}
                                      setListQuestion={setListQuestion}
+                                     listsQuestion={listsQuestion}
                                 />
             }
             {
@@ -101,7 +74,7 @@ function CreateQuiz(){
                                     numberQuestion={index+1}
                                     question={element.question}
                                     answerChoice={element.answerChoices}
-                                    answer={element.answer}
+                                    
                                     />
 
                             

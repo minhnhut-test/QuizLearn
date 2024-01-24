@@ -6,7 +6,6 @@ import './AddQuestion.css';
 import Answer from './Answer';
 import MultipleAnswer from './MultipleAnswer';
 import trash from '../img/trash.svg';
-import { useNavigate } from 'react-router-dom';
 
 
 function AddQuestion(props){
@@ -34,6 +33,10 @@ function AddQuestion(props){
     ])
     const addAnswer = () => {
         const newAnswer = <MultipleAnswer key={listMultiple.length} />;
+        setChoices([...choices,{
+            "userChoice": "",
+            "isAnswer" : 0
+        }])
         setListMultiple([...listMultiple, newAnswer]);
     };
     const removeAnswer = (index) => {
@@ -51,6 +54,10 @@ function AddQuestion(props){
 
     const addAnswerSingle = () =>{
         const newAnswer = <Answer key={listSingle.length} />;
+        setChoices([...choices,{
+            "userChoice": "",
+            "isAnswer" : 0
+        }])
         setListSingle([...listSingle,newAnswer]);
     }
 
@@ -67,18 +74,54 @@ function AddQuestion(props){
         props.setIsAddQuestion((prev) => !prev);
     }
 
-
+   
 
     const [question,setQuestion] = useState("");
+    const [choices,setChoices] = useState([
+        {
+            "userChoice": "",
+            "isAnswer" : 0
+        },{
+            "userChoice": "",
+            "isAnswer" : 0
+        },{
+            "userChoice": "",
+            "isAnswer" : 0
+        },{
+            "userChoice": "",
+            "isAnswer" : 0
+        }
+    ])
+
     
+
     const onChangeQuestion = (event) =>{
         setQuestion(event.target.textContent);
     }
 
 
+
+   
     const saveQuestion = () =>{
         //
-        props.setIsAddQuestion((prev) => !prev);
+        let flag = false;
+        const questionAdd = {
+            "question" : question,
+            "answerChoices" : choices
+        }
+        if(question !== ""){
+            choices.map((element) => {
+                if(element.isAnswer === 1){
+                    flag = true;
+                }
+            })
+        }
+        
+        if(flag === true){
+            props.setListQuestion([...props.listsQuestion,questionAdd]);
+            props.setIsAddQuestion((prev) => !prev);
+        }
+        
     }
 
     return(
@@ -88,9 +131,9 @@ function AddQuestion(props){
                         <img src={icon_back} alt='icon_back'/>
                     </div>
 
-                    <button type="submit" onClick={saveQuestion}>
+                    <div onClick={saveQuestion} className='button-add-question'>
                         Save question
-                    </button>
+                    </div>
                 </header>
 
                 <div className='add-question-tool'>
@@ -123,8 +166,8 @@ function AddQuestion(props){
                     <div className='form-answer single-answer'>
                         <div className='question-added' >
                             <div >
-                                <p className='question-p' onInput={onChangeQuestion} contenteditable="true"> 
-                                    Question:...
+                                <p className='question-p' onInput={onChangeQuestion} contenteditable="true"  data-placeholder="Enter your question here..." > 
+                                    
                                 </p>
                             </div>
                         </div>
@@ -132,7 +175,9 @@ function AddQuestion(props){
 
                             {listSingle.map((index) => (
                                 <div className='card-container'>
-                                    <Answer index_name={index.key} />
+                                    <Answer index_name={index.key} 
+                                        choices={choices}
+                                    />
                                     <div onClick={() => removeAnswerSingle(index)}>
                                         <img  src={trash} alt='icon trash'/>
                                     </div>
@@ -153,15 +198,21 @@ function AddQuestion(props){
                     <div className='form-answer multiple-answer'>
                         <div className='question-added'>
                         <div>
-                                <p className='question-p'  onInput={onChangeQuestion}  contenteditable="true"> 
-                                    Question: ...
+                                <p className='question-p'  onInput={onChangeQuestion}  contenteditable="true" 
+                                    data-placeholder="Enter your question here..."
+                                > 
+                                    
                                 </p>
                         </div>
                         </div>
                         <div className='answer-container'>
                                 {listMultiple.map((index) =>(
                                     <div className='card-container'>
-                                        <MultipleAnswer />
+                                        <MultipleAnswer 
+                                             index_name={index.key} 
+                                             choices={choices}
+                            
+                                        />
                                         <div onClick={() => removeAnswer(index)}>
                                             <img  src={trash} alt='icon trash'/>
                                         </div>

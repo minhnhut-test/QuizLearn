@@ -6,7 +6,6 @@ import trash from './img/trash.svg';
 
 function QuestionCard(params) {
     const [answerChoice,setAnswerChoice] = useState(params.answerChoice);
-    const answer = params.answer;
 
 
 
@@ -43,10 +42,10 @@ function QuestionCard(params) {
                 <div class="answer">
 
                     {
-                        answerChoice.map((element,index) => answer.includes(element) ? 
+                        answerChoice.map((element,index) => element.isAnswer ? 
                         (
-                            <AnswerChoice key={index} answers={element} color={"#4CD948"} />
-                        ):<AnswerChoice key={index} answers={element} />
+                            <AnswerChoice key={index} answers={element.userChoice} color={"#4CD948"} />
+                        ):<AnswerChoice key={index} answers={element.userChoice} />
                         )
                         
                     }
